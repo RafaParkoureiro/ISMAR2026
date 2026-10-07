@@ -71,74 +71,12 @@ AR is powerful, but it's only as rich as the 3D assets it can show, and those ar
 | Say It See It | Speech | 18–74 s | Likert |
 | **Voice-to-3D (ours)** | **Speech** | **~3 s** | **SUS 82.6** |
 
----
-
-## 🛠️ Getting Started
-
-> ⚠️ Fill in the exact commands and versions for your setup.
-
-### Requirements
-
-- **Headset:** Magic Leap 2
-- **Server:** NVIDIA GPU machine (our experiments used 2× A6000) with Docker and the NVIDIA Container Toolkit
-- Headset and server on the same network
-
-### 1. Start the backend
-
-```bash
-git clone <your-repo-url>
-cd <your-repo>/server
-
-docker build -t voice-to-3d .
-docker run --gpus all -p <PORT>:<PORT> voice-to-3d
-```
-
-### 2. Build and deploy the AR app
-
-```bash
-# Open /client in your Unity project, set the server address, then build to the Magic Leap 2
-```
-
-### 3. Try it
-
-1. Open the app and raise your hand to show the menu.
-2. Press the voice button and say something like *"a wooden chair"*.
-3. Watch the hologram appear, then grab it.
 
 ---
-
-## 📁 Repository Structure
-
-```
-.
-├── client/     # Magic Leap 2 AR application
-├── server/     # Dockerized GPU pipeline (ASR, text-to-image, image-to-3D)
-├── docs/       # Figures, demo media, paper
-└── README.md
-```
-
----
-
-## 📄 Paper
-
-Want the full details on the benchmark, the preference study and the usability evaluation?
-
-> **Voice-to-3D: Generative AI for Real-Time Generation of 3D Objects for Augmented Reality**
-> Rafael Conceição, Daniel Mendes, Daniel Pina
-
-
----
-
-## 🏛️ Affiliations
-
-- **INEGI**, Faculdade de Engenharia, Universidade do Porto
-- **INESC TEC**, Faculdade de Engenharia, Universidade do Porto
 
 ## 📬 Contact
 
 - Rafael Conceição: rafaelpc02@gmail.com
-- Daniel Mendes: danielmendes@fe.up.pt
-- Daniel Pina: dpina@inegi.up.pt
 
 ---
 
